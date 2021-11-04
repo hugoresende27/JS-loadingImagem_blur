@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+
+* 
+{
+    box-sizing: border-box;
+}
+/*alinhar conteudos ao centro*/
+body
+{
+    background-color: grey;
+    font-family: 'Fruktur',sans-serif;
+    display: flex;          /*coloca tudo em linha*/
+   /*flex-direction: column; /*coloca tudo em coluna*/
+    align-items: center;    /*alinha horizontalmente*/
+    justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.bg
+{
+    background: url('fundo2.jpeg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: -0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: blur(0px);      /*  blur(10px) */
+}
+
+.loading-text
+{
+    font-size: 100px;
+    color: rgb(10, 10, 10);
+    font-style: oblique;
+}
+
+@media(max-width: 480px)        /*para ecras mais pequenos*/
+{
+    .conteudo
+    {
+        width: 100vw;
+    }
+    .painel:nth-of-type(4), /*conforme o tamanha do ecra, vai mostrar 3 ou 5 miniaturas da imagem, RESPONSIVO*/
+    .painel:nth-of-type(5)  /*media query*/
+    {
+        display: none;
+    }
+    footer 
+    {
+        display: none;
+    };
+}
+
+
+/*estilos do footer */
+
+footer{
+    font-size: 8pt;
+    color: chartreuse;
+    
+    text-align: center;
+    border-top: 1px dashed;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    bottom: 0;
+    
+    
+}
+
+footer a{
+   color: #edf5e1;  /*cor dos links a preto*/
+   text-decoration: none;     /*retira o sublinhado dos links*/
+  
+}
+
+footer a:hover{
+    color: red;
+}
+
+
